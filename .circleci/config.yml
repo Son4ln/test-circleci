@@ -28,8 +28,7 @@ jobs:
           command: sudo docker-php-ext-install bcmath
       - run:
           name: Install the PHP gd library
-          command: sudo docker-php-ext-configure gd \
-                  sudo docker-php-ext-install gd
+          command: sudo docker-php-ext-configure gd
       - checkout
       - run:
           name: Install Composer
