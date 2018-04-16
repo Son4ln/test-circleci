@@ -1,0 +1,41 @@
+{
+  "name": "Crluo",
+  "description": "This is demo about automation test with HerokuCI.",
+  "keywords": [
+    "heroku",
+    "crluo"
+  ],
+  "website": "https://app.crluo.com",
+  "repository": "https://github.com/admin-vivito/crluo",
+  "logo": "https://app.crluo.com/images/crluo_logo.svg",
+  "env": {
+    "APP_ENV": {
+      "description": "Application environment.",
+      "value": "production"
+    }
+  },
+  "image": "heroku/php",
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "heroku-redis:hobby-dev"
+  ],
+  "environments": {
+    "test": {
+      "addons": [
+        "heroku-postgresql:in-dyno"
+      ],
+      "buildpacks": [
+        {"url": "https://github.com/heroku/heroku-buildpack-google-chrome"},
+        {"url": "heroku/php"}
+      ],
+      "env": {
+        "APP_ENV": {"value": "testing"},
+        "APP_KEY": {"value": "base64:xWZ/nsaDlGOaTsGdaiQrZA=="}
+      },
+      "scripts": {
+        "test-setup": "php artisan db:seed && php artisan db:seed --class=TestUsersSeeder",
+        "test": "phpunit"
+      }
+    }
+  }
+}

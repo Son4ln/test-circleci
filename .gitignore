@@ -1,0 +1,44 @@
+# User specific & automatically generated files #
+#################################################
+/node_modules
+/public/db.php
+/public/hot
+/public/mix-manifest.json
+/public/storage
+/public/projects
+/public/home/video/*
+/storage/*.key
+/storage/debugbar
+/vendor
+.env
+*.log
+/package-lock.json
+/phpunit.xml
+/phpcs.xml
+/yarn.lock
+/site.conf
+
+# for Import(remove after renewal)
+/storage/app/importdata
+/storage/importdata
+
+
+# IDE and editor specific files #
+#################################
+/nbproject
+/.idea
+.phpstorm.meta.php
+_ide_helper.php
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.mo
+.project

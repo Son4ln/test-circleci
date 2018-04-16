@@ -1,0 +1,21 @@
+{
+    "authHost": "http://web",
+    "authEndpoint": "/broadcasting/auth",
+    "clients": [],
+    "database": "redis",
+    "databaseConfig": {
+        "redis": {
+            "host": "redis",
+            "port": "6379"
+        }
+    },
+    "devMode": true,
+    "host": null,
+    "port": "9001",
+    "protocol": "http",
+    "socketio": {},
+    "sslCertPath": "",
+    "sslKeyPath": "",
+    "sslCertChainPath": "",
+    "sslPassphrase": ""
+}

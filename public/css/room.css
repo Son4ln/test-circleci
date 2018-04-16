@@ -1,0 +1,303 @@
+.uploader-not-display .qq-upload-button,
+.uploader-not-display .qq-drop-processing,
+.uploader-not-display .qq-upload-list,
+.uploader-not-display .qq-confirm-dialog-selector,
+.uploader-not-display .qq-prompt-dialog-selector
+/*.uploader-not-display .qq-alert-dialog-selector*/
+{
+    display: none;
+}
+
+.uploader-not-display .qq-uploader-selector {
+    display: inline-block;
+}
+
+.block-inline {
+    display: inline-block;
+}
+
+.uploader-not-display .qq-upload-drop-area {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.uploader-not-display .qq-uploader {
+    position: relative;
+    width: 100%;
+}
+
+.qq-uploader .ui-drag-preview {
+    width: 100%;
+    height: auto;
+}
+
+.qq-uploader .ui-drag-preview > div {
+    width: 100%;
+    min-height: 80px;
+}
+
+#work-preview .qq-uploader .ui-drag-preview,
+#work-deliver .qq-uploader .ui-drag-preview {
+    width: 184px;
+}
+
+
+#progress_screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 10001;
+}
+
+.white-boxs {
+    width: 90%;
+    margin-left: 50%;
+    margin-top: 200px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 15px;
+}
+
+@media(min-width: 992px) {
+    .white-boxs {
+        width: 700px;
+    }
+}
+
+.video-container {
+    background-color: #111;
+    padding: 30px 15px;
+}
+
+.flexable {
+    display: flex;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.message-container {
+    flex: 1 1;
+}
+
+.others .message-container {
+    padding-left: 15px;
+}
+
+.message-content {
+    padding: 13px 30px;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+}
+
+.message-content a {
+    display: block;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+.message-user-info{
+    font-size: 0.7em;
+}
+
+.others .message-content {
+    background-color: #ddf;
+}
+
+.others .message-content:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right-color: #ddf;
+    position: absolute;
+    top: 17px;
+    left: -14px;
+}
+
+.self .message-content:after {
+    content: '';
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-left-color: #00c0ef;
+    position: absolute;
+    top: 17px;
+    right: -14px;
+}
+
+.self img {
+    order: 2;
+}
+
+.self .message-container {
+    text-align: right;
+    order: 1;
+    padding-right: 15px;
+}
+
+.self .message-content {
+    background-color: #00c0ef;
+    color: #fff;
+    text-align: left;
+}
+
+.self .message-content a {
+    color: #fff;
+}
+
+.bottom-space {
+    margin: 15px;
+}
+
+.message-dialog {
+    height: 500px;
+    overflow-y: auto;
+}
+
+#messages_box {
+    position: relative;
+}
+
+#custom_drop_zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 40;
+    border: 2px dashed #00c0ef;
+}
+
+#custom_drop_zone:after {
+    content: 'Drop Here';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+#custom_drop_zone * {
+    pointer-events: none;
+}
+
+#message_files .ui-drag-preview,
+#message_files .qq-upload-button,
+#message_files .qq-drop-processing,
+#message_files input,
+#message_files button {
+    display: none;
+}
+
+#message_files ul li {
+    font-size: 0.75em;
+}
+.tooltip.top > .tooltip-inner {
+  background-color: #999999;
+}
+.tooltip.top > .tooltip-arrow {
+  border-top-color: #999999;
+}
+.compare-video > video {
+  max-width: 100%;
+  width: 100%;
+  background: #ccc;
+}
+
+.compare-controls > .compare-progress {
+  height: 20px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+.compare-controls > .compare-progress .compare-progress-bar {
+  height: 20px;
+  background-color: #00c0ef;
+  display: block;
+}
+
+.compare-controls .video-control {
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.panel {
+    border: 1px solid #ddd;
+}
+
+.nav-tabs .signal {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 5px;
+    border-radius: 50%;
+    padding: .2em .6em .3em;
+}
+
+#invitation_link {
+    color: #333;
+}
+
+.progress {
+    height: 20px;
+}
+
+.ui-preview-movie, .movie-drag {
+  display: inline-block;
+  margin-right: 1%;
+  white-space: normal;
+  position: relative;
+}
+
+.ui-preview-movie > div, .movie-drag > div {
+  position: relative
+}
+
+.ui-preview-movie img, .movie-drag img {
+  width: 160px;
+  max-width: 160px;
+  max-height: 90px;
+}
+
+.ui-preview-movie img + span, .movie-drag img + span {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 0px;
+  color: rgb(201, 201, 201);
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+}
+
+.ui-delete-movie, .ui-share-movie {
+  position: absolute;
+  width: 24px;
+  height: 22px;
+  top: 3px;
+  right: 3px;
+  display: none;
+}
+
+.video-menu {
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+}
+
+.ui-preview-movie:hover .ui-share-movie, .ui-preview-movie:hover .ui-del-preview {
+  display: block;
+}
