@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Install the PHP gd library
           command: sudo docker-php-ext-configure gd \
-                  docker-php-ext-install gd
+                  sudo docker-php-ext-install gd
       - checkout
       - run:
           name: Install Composer
