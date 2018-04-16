@@ -23,6 +23,9 @@ jobs:
       - run:
           name: Install PHP extensions
           command: sudo docker-php-ext-install pdo
+      - run:
+          name: Install bcmath
+          command: sudo apt install php7.0-bcmath
       - checkout
       - run:
           name: Install Composer
