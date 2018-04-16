@@ -37,8 +37,8 @@ jobs:
             php -v
             php composer.phar --version
       - run:
-          name: Install project dependencies
-          command: php composer.phar install
+          name: update composer
+          command: php composer.phar update
       # - run:
       #     name: Run CS tests
       #     command: vendor/bin/phpcs
