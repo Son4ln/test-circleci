@@ -36,6 +36,9 @@ jobs:
       # run tests!
       # - run: yarn test
       - run:
+        name: Composer install
+        command: composer install
+      - run:
           name: Start Chrome Driver
           command: ./vendor/laravel/dusk/bin/chromedriver-linux
           background: true
