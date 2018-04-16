@@ -8,12 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/php:7.1.5-browsers
-      - setup:
-        - curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
-        - jabba install zulu@1.9.0
-        - sudo docker-php-ext-install bcmath
-        # - echo 'memory_limit = -1' | sudo tee -a /usr/local/etc/php/php.ini
-        # - echo 'date.timezone = UTC' | sudo tee -a /usr/local/etc/php/php.ini
+      
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -30,7 +25,7 @@ jobs:
           command: sudo docker-php-ext-install pdo
       - run:
           name: Install bcmath
-          command: sudo docker-php-ext-install php7.1-bcmath
+          command: sudo docker-php-ext-install bcmath
       - checkout
       - run:
           name: Install Composer
