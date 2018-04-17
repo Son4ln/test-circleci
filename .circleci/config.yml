@@ -26,11 +26,11 @@ jobs:
       - run: npm -v
       - run: npm install puppeteer
       - run: node puppeteer/exam.js
+      - run: git config --global user.email "son4ln@gmail.com"
+      - run: git config --global user.name "Son Dang"
       - run: git status
       - run: git add --all
       - run: git commit -m "puppeteer test"
       - run: git push
-      - run: git config --global user.email "son4ln@gmail.com"
-      - run: git config --global user.name "Son Dang"
 
       # - run: php artisan serve
