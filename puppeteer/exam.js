@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   // set headless: false to open chrome browser 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
   await page.goto('https://dev.crluo.com/login');
   // test display size
@@ -15,7 +15,7 @@ const puppeteer = require('puppeteer');
   await page.waitFor(1000);
 
   // take screen shot
-  await page.screenshot({path: 'img/example-crluo-viewport.png'});
+  await page.screenshot({path: 'puppeteer/img/example-crluo-viewport.png'});
 
   // display size 1366 x 768
   await page.setViewport({
@@ -30,12 +30,12 @@ const puppeteer = require('puppeteer');
   await emailInput.type('admin@gyaku.info', {delay: 100});
   await passInput.type('aaaaaa', {delay: 100});
   // take screen shot after type email and password
-  await page.screenshot({path: 'img/example-crluo-login-input.png'});
+  await page.screenshot({path: 'puppeteer/img/example-crluo-login-input.png'});
   // press enter on keyboard
   await passInput.press('Enter');
   // wait for navigation
   await page.waitForNavigation();
   // take screen shot after login
-  await page.screenshot({path: 'img/example-crluo-login-success.png'});
+  await page.screenshot({path: 'puppeteer/img/example-crluo-login-success.png'});
   await browser.close();
 })();
