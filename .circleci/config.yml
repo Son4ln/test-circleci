@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run: sudo apt install -y libsqlite3-dev zlib1g-dev
       - run: sudo docker-php-ext-install zip
+      - run: sudo docker-php-ext-install bcmath
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: sudo composer self-update
       - restore_cache:
