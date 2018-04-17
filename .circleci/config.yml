@@ -18,5 +18,4 @@ jobs:
 
     steps:
       - checkout
-      - run: npm -v
-      - run: node -v
+      - run: php -v
