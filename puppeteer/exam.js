@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
   // set headless: false to open chrome browser 
-  const browser = await puppeteer.launch({headless: true});
+  const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
   await page.goto('https://dev.crluo.com/login');
   // test display size

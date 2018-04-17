@@ -17,20 +17,23 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+      - run: composer
       - checkout
-      - run: sudo apt-get update
-      - run: sudo apt-get install git
-      - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-      - run: sudo apt-get install -y nodejs
-      - run: node -v
-      - run: npm -v
-      - run: npm install puppeteer
-      - run: node puppeteer/exam.js
-      - run: git config --global user.email "son4ln@gmail.com"
-      - run: git config --global user.name "Son Dang"
-      - run: git status
-      - run: git add --all
-      - run: git commit -m "puppeteer test"
-      - run: git push
 
-      # - run: php artisan serve
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      # - run: composer install -n --prefer-dist
+
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+        
+      # run tests!
+      # - run: phpunit
