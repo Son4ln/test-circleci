@@ -18,7 +18,8 @@ jobs:
 
     steps:
       - checkout
-
+      - run: sudo apt-get update
+      - run: sudo apt-get install git
       - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
       - run: sudo apt-get install -y nodejs
       - run: node -v
