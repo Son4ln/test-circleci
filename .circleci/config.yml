@@ -5,6 +5,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
+      - image: circleci/mysql:5
     working_directory: ~/laravel
     steps:
       - checkout
@@ -27,9 +28,8 @@ jobs:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
       - run: composer install --no-scripts
-      - run: node -v
-      - run: npm -v
-      - run: ls
+      - run: sudo apt-get update
+      - run: mysql
       # - run: yarn install
       # - save_cache:
       #     key: node-v1-{{ checksum "package.json" }}
