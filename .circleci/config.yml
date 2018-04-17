@@ -18,4 +18,12 @@ jobs:
 
     steps:
       - checkout
-      - run: php -v
+      - restore_cache:
+          keys:
+            - composer-cache-{{ checksum "composer.json" }}
+            - composer-cache-
+            - dependency-cache-{{ checksum "package.json" }}
+
+      - run:
+          name: Installing PHP packages
+          command: composer install -n --prefer-dist --ignore-platform-reqs --optimize-autoloader
