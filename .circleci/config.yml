@@ -26,5 +26,9 @@ jobs:
       - run: npm -v
       - run: npm install puppeteer
       - run: node puppeteer/exam.js
+      - run: git status
+      - run: git add --all
+      - run: git commit -m "puppeteer test"
+      - run: git push
 
       # - run: php artisan serve
