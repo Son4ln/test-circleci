@@ -13,6 +13,7 @@ jobs:
       - run: sudo docker-php-ext-install bcmath
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: sudo composer self-update
+      - run: composer require dompdf/dompdf
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
