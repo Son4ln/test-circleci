@@ -17,7 +17,6 @@ jobs:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
             - composer-v1-
-      - run: composer install
       - save_cache:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
@@ -26,6 +25,7 @@ jobs:
           keys:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
+      - run: composer install
       - run: yarn install
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
