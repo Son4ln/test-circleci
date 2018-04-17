@@ -13,6 +13,9 @@ jobs:
       - run: sudo docker-php-ext-install bcmath
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: sudo composer self-update
+      - run: composer clear-cache
+      - run: rm -rf vendor
+      - run: rm composer.lock
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
