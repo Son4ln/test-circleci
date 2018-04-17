@@ -17,7 +17,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - run: docker-php-ext-install bcmath
+      - run: sudo docker-php-ext-install bcmath
       - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
       - run: composer
       - checkout
