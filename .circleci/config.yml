@@ -5,13 +5,10 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-      # - image: circleci/postgres:9.6-alpine
-    environment:
-        # lang settings required for Meteor's Mongo
-        LANG: UTF-8
 
     working_directory: ~/laravel
     steps:
+      - run: sudo apt-get install language-pack-ja
       - checkout
       # - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
       # - run: sudo docker-php-ext-install zip
