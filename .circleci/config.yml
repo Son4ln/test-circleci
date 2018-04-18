@@ -13,26 +13,26 @@ jobs:
     working_directory: ~/laravel
     steps:
       - checkout
-      - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
-      - run: sudo docker-php-ext-install zip
-      - run: sudo docker-php-ext-install bcmath
-      - run: sudo docker-php-ext-install gd
-      - run: sudo apt install postgresql-client
-      - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-      - run: sudo composer self-update
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "composer.lock" }}
-            - composer-v1-
-      - save_cache:
-          key: composer-v1-{{ checksum "composer.lock" }}
-          paths:
-            - vendor
-      - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
-      - run: composer install --no-scripts
+      # - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
+      # - run: sudo docker-php-ext-install zip
+      # - run: sudo docker-php-ext-install bcmath
+      # - run: sudo docker-php-ext-install gd
+      # - run: sudo apt install postgresql-client
+      # - run: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+      # - run: sudo composer self-update
+      # - restore_cache:
+      #     keys:
+      #       - composer-v1-{{ checksum "composer.lock" }}
+      #       - composer-v1-
+      # - save_cache:
+      #     key: composer-v1-{{ checksum "composer.lock" }}
+      #     paths:
+      #       - vendor
+      # - restore_cache:
+      #     keys:
+      #       - node-v1-{{ checksum "package.json" }}
+      #       - node-v1-
+      # - run: composer install --no-scripts
       - run: sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
       - run: sudo apt-get install -y nodejs
       - run: node -v
@@ -40,8 +40,8 @@ jobs:
       - run: npm install puppeteer
       - run: node puppeteer/exam.js
       - run: mkdir -p /tmp/test-results
-      - store_test_results:
-          path: /home/circleci/laravel/puppeteer/img
+      # - store_test_results:
+      #     path: /home/circleci/laravel/puppeteer/img
       - store_artifacts:
           path: /home/circleci/laravel/puppeteer/img
           destination: test-results
