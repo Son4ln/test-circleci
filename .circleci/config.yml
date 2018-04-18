@@ -39,7 +39,7 @@ jobs:
       - run: npm -v
       - run: npm install puppeteer
       - run: node puppeteer/exam.js
-      - run: mkdir -p /tmp/test-results
+      # - run: mkdir -p /tmp/test-results
       # - store_test_results:
       #     path: /home/circleci/laravel/puppeteer/img
       - store_artifacts:
