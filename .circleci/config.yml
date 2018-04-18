@@ -46,4 +46,5 @@ jobs:
       #     path: /puppeteer/img
       #     destination: test-results
 
-      - run: ls
+      - run: ls -R
+      - run: ls -d
