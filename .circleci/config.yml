@@ -8,8 +8,8 @@ jobs:
 
     working_directory: ~/laravel
     steps:
-      - run: sudo apt-get install language-pack-ja
       - checkout
+      - run: sudo apt install ttf-mscorefonts-installer
       # - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
       # - run: sudo docker-php-ext-install zip
       # - run: sudo docker-php-ext-install bcmath
