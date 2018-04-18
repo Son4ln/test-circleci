@@ -48,6 +48,4 @@ jobs:
 
       - run: ls -R
       - run: cd ./puppeteer/img
-      - run: ls -R
-      - run: cd /puppeteer/img
-      - run: ls -R
+      - run: pwd
