@@ -47,5 +47,5 @@ jobs:
       #     destination: test-results
 
       - run: ls -R
-      - run: cd /home/circleci/laravel/puppeteer/img
+      - run: cd /home/circleci/laravel/puppeteer/img | ls -R
       - run: pwd
