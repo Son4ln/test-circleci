@@ -37,3 +37,5 @@ jobs:
       - run: sudo apt-get install -y nodejs
       - run: node -v
       - run: npm -v
+      - run: npm install puppeteer
+      - run: node puppeteer/exam.js
