@@ -12,6 +12,7 @@ jobs:
 
     working_directory: ~/laravel
     steps:
+      - run: sudo apt-get install locales
       - checkout
       # - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
       # - run: sudo docker-php-ext-install zip
