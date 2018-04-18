@@ -5,11 +5,11 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-
+    environment:
+      LANG: en_US.UTF-8
     working_directory: ~/laravel
     steps:
       - checkout
-      - run: sudo apt install ttf-mscorefonts-installer
       # - run: sudo apt install -y libsqlite3-dev zlib1g-dev libpng-dev
       # - run: sudo docker-php-ext-install zip
       # - run: sudo docker-php-ext-install bcmath
