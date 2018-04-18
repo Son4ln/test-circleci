@@ -33,17 +33,17 @@ jobs:
       #       - node-v1-{{ checksum "package.json" }}
       #       - node-v1-
       # - run: composer install --no-scripts
-      - run: sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-      - run: sudo apt-get install -y nodejs
-      - run: node -v
-      - run: npm -v
-      - run: npm install puppeteer
-      - run: node puppeteer/exam.js
-      - run: mkdir -p /tmp/test-results
-      - store_test_results:
-          path: /puppeteer/img
-      - store_artifacts:
-          path: /puppeteer/img
-          destination: test-results
+      # - run: sudo curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+      # - run: sudo apt-get install -y nodejs
+      # - run: node -v
+      # - run: npm -v
+      # - run: npm install puppeteer
+      # - run: node puppeteer/exam.js
+      # - run: mkdir -p /tmp/test-results
+      # - store_test_results:
+      #     path: /puppeteer/img
+      # - store_artifacts:
+      #     path: /puppeteer/img
+      #     destination: test-results
 
-      - run: ls -d
+      - run: ls
